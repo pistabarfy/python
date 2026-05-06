@@ -1,3 +1,5 @@
+from deepcopy import deepcopy
+
 count = 1
 while count<=5:
     print(count)
@@ -19,7 +21,11 @@ for i in range(5):
     pass
 print("done")
 
+array = [1,2,3,4,5,6]
 
+print(array.copy())
+
+print(deepcopy(array))
 
 
 string = "Sadiya Shaikh"
