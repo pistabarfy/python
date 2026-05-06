@@ -11,9 +11,6 @@ x[0].append(99)
 print(x)
 print(y)
 
-
-
-
 def add(a,b):
     if not isinstance(a,(int,float)) or not isinstance(b,(int,float)) or  type(a) == bool or type(b) == bool:
         return "Plz Enter integers or float only!"
