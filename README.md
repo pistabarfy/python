@@ -2,67 +2,83 @@
 
 **Started: May 2, 2026. Day 1 was hello world. It gets deeper from here.**
 
-I'm learning Python from the ground up — not surface level, not tutorials, not copy paste.
-I learn by building things from scratch and understanding what's actually happening under the hood.
-Every file in here is something I wrote myself, figured out myself, broke myself.
+I don't use tutorials. I build things from scratch, break them, and figure out what's happening underneath. Every file here is something I wrote myself and understood myself.
 
-Goal: systems engineer. Distributed systems, bare metal performance, understanding the machine.
-This repo documents the journey from zero.
+Goal: systems engineer. Distributed systems, bare metal performance, understanding the machine at every layer.
 
 ---
 
-## what's here
+## what i built
 
 ### `analyse.py` — string analyser *(day 2)*
-Built a full string analysis engine from scratch. No built-in shortcuts.
+Full string analysis engine. No built-in shortcuts.
 
-- letter counter (manual loop, no `len()`)
-- word counter
+- letter counter without `len()` — manual loop
 - vowel and consonant counter
 - palindrome checker
-- most frequent character finder (nested loops, O(n²))
-- case detection using **raw ASCII values with `ord()`** — 65-90 uppercase, 97-122 lowercase
+- most frequent character using nested loops — O(n²), my first real algorithm
+- case detection using raw ASCII values with `ord()` — 65-90 uppercase, 97-122 lowercase
 - unique character frequency map
-- full edge case handling for empty strings
+- edge case handling for empty strings
 
-Most people would do `len(text)` and call it a day.
-I wanted to know what `len()` is actually doing. So I wrote it myself.
-
-### `calculator.py *day 3*`
-Basic calculator. First real project.
-
-### `functions.py`
-Learning how functions actually work — scope, return values, how Python handles calls.
-
-### `legb.py *day 4*`
-Python's scope resolution — Local, Enclosing, Global, Built-in.
-Understanding why Python looks up variables the way it does.
-
-### `nested.py`
-Nested functions and closures. How inner functions capture outer scope.
-
-### `first.py`
-Where it all started.
+I wanted to know what `len()` actually does. So I didn't use it.
 
 ---
 
-## the approach
-
-No shortcuts. No `import this_does_everything`.
-If I can build it manually first, I build it manually.
-That's how you actually learn what the language is doing.
-
-When I use a built-in later, I'll already know what it replaced.
+### `calculator.py` — interactive calculator *(day 3)*
+First real interactive project. Takes user input, handles operations, loops until exit.
 
 ---
 
-## what's coming
+### `studentregister.py` — student register *(day 5)*
+Student register built using lists, not a database.
 
-- SQL fundamentals
-- Backend basics
-- Systems programming
-- Going deeper into how Python executes code
-- Distributed systems concepts
+- walrus operator `:=` for clean input handling
+- duplicate roll number detection
+- `enumerate()` to track positions
+- `zip()` to pair names with roll numbers
+
+---
+
+### `shoppingcart.py` — shopping cart simulator *(day 6)*
+Most complex project so far. Combines everything learned.
+
+- `defaultdict(list)` to group items by category
+- walrus operator `:=` in while condition
+- `Counter` for item frequency
+- `most_common(2)` to find top 2 items
+- reused my own `flatten()` function from recursion day
+
+---
+
+## what i learned
+
+### `first.py` *(day 1)*
+Hello world. Variables. The beginning.
+
+### `functions.py` *(day 4)*
+How functions actually work — `*args`, `**kwargs`, default parameters, return values.
+
+### `legb.py` *(day 4)*
+Python's scope resolution — Local, Enclosing, Global, Built-in. Why Python finds variables in the order it does.
+
+### `nested.py` *(day 4)*
+Nested functions, closures, how inner functions capture outer scope.
+
+### `recursion.py` *(day 5)*
+Factorial using recursion. Understanding base case and recursive case.
+
+### `nested.py` — array flattening *(day 5)*
+Spent 3 hours figuring out how to flatten `[1,[2,3],4,5]` without any hints. When it clicked I realised this is the same logic your file system uses — every folder inside a folder inside a folder.
+
+### `deepcopy.py` *(day 5)*
+Deep vs shallow copy. `isinstance()` for type validation. Discovered `bool` is a subclass of `int` in Python — had to explicitly reject it.
+
+### `while.py` *(day 3)*
+While loops, nested for loops, `break`, `continue`, `pass`, string iteration.
+
+### `datastructures.py` *(day 6)*
+Sets, dict methods (`keys()`, `values()`, `items()`), `Counter`, list/dict/set comprehensions, slicing, `[::-1]` creates a new list not mutate, starred unpacking with `*b`.
 
 ---
 
@@ -70,7 +86,7 @@ When I use a built-in later, I'll already know what it replaced.
 
 Twitter: [@pistabarfy](https://twitter.com/pistabarfy)
 
-posting everything raw as I learn it. the confusion, the breakthroughs, the weird stuff I find.
+posting everything raw as I learn it.
 
 ---
 
