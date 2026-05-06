@@ -14,7 +14,8 @@ result = (1,2,3,4,5)
 data = {
     "city":"mumbai",
     "genital":"penis",
-    "sex":"male"
+    "sex":"male",
+    "hinged":"no"
 }
 
 print(arrr("sexy sahil",*result,**data))
