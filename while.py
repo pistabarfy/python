@@ -1,4 +1,4 @@
-from deepcopy import deepcopy
+from copy import deepcopy
 
 count = 1
 while count<=5:
@@ -29,6 +29,7 @@ print(deepcopy(array))
 
 
 string = "Sadiya Shaikh"
+
 vowel=""
 
 for text in string:
