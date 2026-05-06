@@ -10,6 +10,10 @@ def factorial(n):
         return factoriyal
 print(factorial(5))
 
+
+
+# tried to test legb and shit 
+
 x = "global"
 print(x)
 
