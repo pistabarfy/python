@@ -12,6 +12,7 @@ def flatter(*array):
     return result
     
 
+print("happy damn brain pain")
 
 print(flatter(*flat))
 
