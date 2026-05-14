@@ -1,0 +1,9 @@
+import os 
+from pathlib import Path
+
+
+print(os.environ.get('Home'))
+print(os.getcwd())
+print(os.listdir())
+print(os.path.isdir("analyse.py"))
+print(Path.cwd())
